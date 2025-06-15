@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "sonner";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "next-themes";
 
 export default function RootLayout({
   children,
@@ -42,10 +43,12 @@ export default function RootLayout({
         <meta name="twitter:image" content="/assets/twitter-image.png" />
       </head>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
-        <Toaster position="bottom-right" />
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <Navbar />
+          {children}
+          <Footer />
+          <Toaster position="bottom-right" />
+        </ThemeProvider>
       </body>
     </html>
   );
