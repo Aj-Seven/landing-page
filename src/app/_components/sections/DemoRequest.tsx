@@ -122,7 +122,7 @@ export default function DemoSection() {
                 className={`w-full px-4 py-2 rounded-md border ${
                   errors[name as keyof QuoteFormData]
                     ? "border-red-500"
-                    : "border-gray-300"
+                    : "border-gray-700"
                 } focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                 placeholder={placeholder}
               />
@@ -144,7 +144,7 @@ export default function DemoSection() {
               value={formData.message}
               onChange={handleChange}
               className={`w-full px-4 py-2 rounded-md border ${
-                errors.message ? "border-red-500" : "border-gray-300"
+                errors.message ? "border-red-500" : "border-gray-700"
               } focus:outline-none focus:ring-2 focus:ring-indigo-500`}
               placeholder="Your message"
             />

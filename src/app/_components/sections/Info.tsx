@@ -61,7 +61,7 @@ export default function InfoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800"
+              className="p-4 rounded-xl border border-gray-200 dark:border-gray-800"
             >
               <div className="flex items-start gap-4">
                 <Image

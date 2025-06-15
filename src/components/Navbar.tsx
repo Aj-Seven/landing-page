@@ -63,11 +63,20 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-[999] w-full bg-white/70 backdrop-blur-md border-b border-gray-200">
+    <nav className="sticky top-0 z-[999] w-full backdrop-blur-md border-b dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 py-1 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/assets/logo.svg" alt="Logo" width={48} height={48} />
+          <Image
+            src="/assets/logo.svg"
+            alt="Logo"
+            width={48}
+            height={48}
+            className="dark:invert"
+          />
+          <span className="text-xl font-bold text-gray-900 dark:text-white">
+            BrandName
+          </span>
         </Link>
 
         {/* Hamburger menu (mobile) */}
@@ -82,6 +91,7 @@ export default function Navbar() {
             size="default"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
+            className="dark:text-white"
           >
             {mobileMenuOpen ? <X size={34} /> : <Menu size={34} />}
           </Button>
@@ -95,7 +105,7 @@ export default function Navbar() {
                 onClick={() =>
                   setActiveDropdown(activeDropdown === key ? null : key)
                 }
-                className="flex items-center gap-1 font-medium text-gray-900 hover:text-blue-600 transition cursor-pointer"
+                className="flex items-center gap-1 font-medium text-gray-900 hover:text-blue-600 transition cursor-pointer dark:text-white"
                 aria-expanded={activeDropdown === key}
               >
                 {label}
@@ -113,14 +123,14 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-0 mt-2 bg-white shadow-lg rounded-md border w-56 z-50"
+                    className="absolute left-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md border w-56 z-50"
                   >
-                    <ul className="flex flex-col text-sm p-2 text-gray-700">
+                    <ul className="flex flex-col text-sm p-2 text-gray-700 dark:text-gray-300">
                       {links.map(({ href, label }) => (
                         <li key={href}>
                           <Link
                             href={href}
-                            className="block px-4 py-2 hover:bg-gray-100"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                           >
                             {label}
                           </Link>
@@ -134,7 +144,7 @@ export default function Navbar() {
           ))}
 
           <Link href="/auth/sign-in">
-            <Button className="px-4 py-2 font-medium text-white bg-blue-500 hover:bg-blue-600">
+            <Button className="px-4 py-2 font-medium text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700">
               Sign In
             </Button>
           </Link>
@@ -149,16 +159,16 @@ export default function Navbar() {
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden px-4 pb-4 overflow-hidden border-t border-gray-200"
+            className="md:hidden px-4 pb-4 overflow-hidden border-t border-gray-200 dark:border-gray-800"
           >
-            <ul className="flex flex-col space-y-3 mt-4 text-gray-900">
+            <ul className="flex flex-col space-y-3 mt-4 text-gray-900 dark:text-gray-300">
               {navItems.map(({ key, label, links }) => (
                 <li key={key}>
                   <button
                     onClick={() =>
                       setActiveDropdown(activeDropdown === key ? null : key)
                     }
-                    className="w-full flex justify-between items-center font-medium text-left cursor-pointer"
+                    className="w-full flex justify-between items-center font-medium text-left cursor-pointer dark:text-white"
                   >
                     {label}
                     {activeDropdown === key ? (
@@ -174,14 +184,14 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: -6 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -6 }}
-                        className="pl-4 mt-2 space-y-2 text-sm text-gray-700"
+                        className="pl-4 mt-2 space-y-2 text-sm dark:text-gray-400"
                       >
                         {links.map(({ href, label }) => (
                           <li key={href}>
                             <Link
                               href={href}
                               onClick={() => setMobileMenuOpen(false)}
-                              className="block py-1 hover:text-blue-600"
+                              className="block py-1 hover:text-blue-600 dark:hover:text-blue-500"
                             >
                               {label}
                             </Link>
@@ -197,7 +207,7 @@ export default function Navbar() {
                   href="/auth/sign-in"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <Button className="px-4 py-2 font-medium text-white bg-blue-500 hover:bg-blue-600">
+                  <Button className="px-4 py-2 font-medium text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700">
                     Sign In
                   </Button>
                 </Link>

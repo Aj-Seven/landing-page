@@ -60,7 +60,7 @@ export default function FaqSection() {
               <motion.div
                 key={index}
                 layout
-                className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-900"
+                className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden"
                 transition={{ layout: { duration: 0.5, type: "spring" } }}
               >
                 <button

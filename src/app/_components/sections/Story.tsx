@@ -76,7 +76,7 @@ export default function StorySection() {
         {stories.map((story, idx) => (
           <motion.div
             key={idx}
-            className="flex-shrink-0 w-full md:w-[80%] lg:w-[60%] snap-center bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden"
+            className="flex-shrink-0 w-full md:w-[80%] lg:w-[60%] snap-center rounded-2xl shadow-md overflow-hidden"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

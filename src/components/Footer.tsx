@@ -21,7 +21,7 @@ export default function Footer() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-2 mt-8 px-3"
+      className="border-t text-gray-700 dark:text-gray-300 py-2 mt-8 px-3"
     >
       <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {/* Brand Section with Logo */}

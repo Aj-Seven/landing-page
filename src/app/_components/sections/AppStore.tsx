@@ -9,7 +9,7 @@ export default function AppStores() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="max-w-6xl mx-auto bg-gray-100 dark:bg-gray-900 border rounded-xl py-20 px-3"
+      className="max-w-6xl mx-auto border rounded-xl py-20 px-3"
     >
       <section className="max-w-6xl mx-auto ">
         <div className="max-w-4xl mx-auto text-center md:flex md:justify-between md:items-center md:space-x-8">
